@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUKA | Event Planning & Execution</title>
+    <!-- Google Fonts: Elegancia Editorial -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --luka-gold: #c5a059;
+            --luka-dark: #1a1a1a;
+            --luka-cream: #f9f7f2;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--luka-cream);
+            color: var(--luka-dark);
+        }
+
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Hero Image con Parallax Suave */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+        }
+
+        /* Animaciones de Entrada */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Botón Estilizado */
+        .btn-luka {
+            border: 1px solid var(--luka-gold);
+            color: var(--luka-gold);
+            padding: 1rem 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.75rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-luka:hover {
+            background-color: var(--luka-gold);
+            color: white;
+        }
+
+        /* Galería Estilo Pinterest/Asimétrica */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .gallery-item img {
+            transition: transform 0.8s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .line-gold {
+            width: 50px;
+            height: 1px;
+            background-color: var(--luka-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación Minimalista -->
+    <nav class="absolute w-full z-50 px-8 py-10 flex justify-between items-center">
+        <div class="text-white">
+            <!-- Representación del Logo LUKA -->
+            <h1 class="text-3xl font-serif tracking-[0.3em] font-light">LUKA</h1>
+            <p class="text-[8px] tracking-[0.5em] uppercase opacity-80">Event Planning</p>
+        </div>
+        <div class="hidden md:flex gap-10 text-white text-[10px] uppercase tracking-[0.2em] font-light">
+            <a href="#experiencia" class="hover:text-gold transition-all">Experiencia</a>
+            <a href="#galeria" class="hover:text-gold transition-all">Galería</a>
+            <a href="#contacto" class="hover:text-gold transition-all">Contacto</a>
+        </div>
+        <div class="md:hidden text-white text-2xl">☰</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h2 class="font-serif italic text-white text-4xl md:text-6xl lg:text-8xl mb-6 font-light">Creamos momentos,</h2>
+            <h2 class="font-serif text-white text-4xl md:text-6xl lg:text-8xl mb-10 font-semibold uppercase tracking-widest">Ejecutamos sueños.</h2>
+            <div class="flex justify-center">
+                <a href="#contacto" class="btn-luka !text-white !border-white hover:!bg-white hover:!text-black">Solicitar Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introducción / Statement -->
+    <section id="experiencia" class="py-32 px-6 lg:px-24 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <div class="flex flex-col items-center mb-10">
+                <div class="line-gold mb-6"></div>
+                <span class="text-[10px] tracking-[0.4em] uppercase text-gray-400">Desde Cd. Juárez para el mundo</span>
+            </div>
+            <h3 class="font-serif text-3xl md:text-5xl leading-relaxed mb-12 italic">
+                "En LUKA no solo planeamos eventos; diseñamos atmósferas que cuentan tu historia. Desde la primera idea hasta el último invitado, estamos ahí."
+            </h3>
+            <div class="grid md:grid-cols-3 gap-12 text-sm tracking-wide text-gray-500 font-light">
+                <p>BODAS Y CELEBRACIONES</p>
+                <p>EVENTOS CORPORATIVOS</p>
+                <p>PLANIFICACIÓN INTEGRAL</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Visual Asimétrica -->
+    <section id="galeria" class="py-20 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-[1600px] mx-auto">
+            <div class="md:col-span-8 gallery-item h-[600px]">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=1200" alt="Evento de gala" class="w-full h-full object-cover">
+            </div>
+            <div class="md:col-span-4 flex flex-col gap-6">
+                <div class="gallery-item h-[288px]">
+                    <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b33e?auto=format&fit=crop&q=80&w=800" alt="Detalle cena" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item h-[288px] bg-white p-10 flex flex-col justify-center border border-gray-100">
+                    <h4 class="font-serif text-2xl italic mb-4">La excelencia está en el detalle.</h4>
+                    <p class="text-xs text-gray-400 leading-loose">Cada flor, cada luz y cada tiempo están coordinados bajo nuestra visión de perfección.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section class="py-32 bg-stone-50 px-6 lg:px-24">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="font-serif text-5xl md:text-7xl mb-10">LO QUE HACEMOS<span class="text-gold italic text-3xl block font-light">De principio a fin.</span></h2>
+                <div class="space-y-12">
+                    <div class="group cursor-default">
+                        <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+                            <span class="font-bold text-xs tracking-widest">01 / CONCEPTUALIZACIÓN</span>
+                            <span class="text-xl group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity">Definimos el estilo, la paleta de colores y el moodboard de tu evento.</p>
+                    </div>
+                    <div class="group cursor-default">
+                        <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+                            <span class="font-bold text-xs tracking-widest">02 / LOGÍSTICA & PROVEEDORES</span>
+                            <span class="text-xl group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity">Gestión de los mejores proveedores en Cd. Juárez y alrededores.</p>
+                    </div>
+                    <div class="group cursor-default">
+                        <div class="flex justify-between items-center border-b border-gray-200 pb-4">
+                            <span class="font-bold text-xs tracking-widest">03 / COORDINACIÓN EN VIVO</span>
+                            <span class="text-xl group-hover:translate-x-2 transition-transform">→</span>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-500 opacity-0 group-hover:opacity-100 transition-opacity">Estamos presentes para que tú solo te preocupes por disfrutar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -left-10 w-full h-full border border-gray-200 z-0"></div>
+                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=1000" alt="Celebración" class="relative z-10 grayscale hover:grayscale-0 transition-all duration-1000">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="bg-white pt-32 pb-16 px-6 lg:px-24">
+        <div class="text-center mb-24">
+            <h2 class="font-serif italic text-4xl md:text-6xl mb-10">¿Empezamos a planear?</h2>
+            <a href="https://www.instagram.com/luka.eventplanning/" target="_blank" class="btn-luka inline-block">Enviar un DM</a>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-12 border-t border-gray-100 pt-16">
+            <div>
+                <h1 class="text-2xl font-serif tracking-[0.3em] font-light">LUKA</h1>
+                <p class="text-[8px] tracking-[0.5em] uppercase opacity-50 mt-2">Ciudad Juárez, Chihuahua</p>
+            </div>
+            <div class="flex flex-col gap-4 text-[10px] tracking-widest uppercase font-bold text-gray-400">
+                <a href="#" class="hover:text-black transition-colors">Instagram</a>
+                <a href="#" class="hover:text-black transition-colors">Facebook</a>
+                <a href="#" class="hover:text-black transition-colors">WhatsApp</a>
+            </div>
+            <div class="text-[10px] tracking-widest uppercase text-gray-400 text-right md:text-left">
+                <p>Todos los momentos reservados ©2024</p>
+                <p class="mt-2 italic font-serif text-xs lowercase">by luka event planning</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Animación de aparición al hacer scroll
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
